@@ -1,0 +1,16 @@
+module Logic_Door(
+ input Pin_A,
+ input Pin_B,
+ input Pin_Cin,
+ output Pin_Cout,
+ output Pin_S
+ );
+ 
+ always@(*)
+  begin
+     Pin_Cout=~(~(Pin_A&Pin_B)|((Pin_Cin&(~(~Pin_A&Pin_B)|(Pin_A&~Pin_B)))));
+	  Pin_S=(~((~Pin_A&Pin_B)|(Pin_A&~Pin_B))&Pin_Cin)|(((~Pin_A&Pin_B)|(Pin_A&~Pin_B))&(~Pin_Cin));
+  end
+endmodule
+  
+ 
