@@ -1,0 +1,11 @@
+module clk_dis1_count(clk1,rst_n,op0,op1,op2,op3,op4,op5);
+input clk1,rst_n; //声明时钟和复位信号，此处时钟为分频后的1KHz信号
+output reg[5:0] op0=6'd0;
+output reg[5:0] op1=6'd0;
+output reg[5:0] op2=6'd0;
+output reg[5:0] op3=6'd0;
+output reg[5:0] op4=6'd0;
+output reg[5:0] op5=6'd0;//op0,op1,op2,op3,op4,op5为数码管显示时钟
+
+
+ 

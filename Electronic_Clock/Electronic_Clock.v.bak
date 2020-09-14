@@ -1,0 +1,2 @@
+module Eletronic_Clock(
+input clk;
